@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "proyecto_prueba": {
+    "Componentes-Palli": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/proyecto_prueba",
+            "outputPath": "dist/componentes-palli",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "proyecto_prueba:build:production"
+              "browserTarget": "Componentes-Palli:build:production"
             },
             "development": {
-              "browserTarget": "proyecto_prueba:build:development"
+              "browserTarget": "Componentes-Palli:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "proyecto_prueba:build"
+            "browserTarget": "Componentes-Palli:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "proyecto_prueba"
+  "defaultProject": "Componentes-Palli"
 }
