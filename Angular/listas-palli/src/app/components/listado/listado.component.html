@@ -1,1 +1,28 @@
-<h1 appBackgrounblock>Listado de alumnos</h1>
+<h1>Listado de alumnos</h1>
+
+<div *ngIf="estado; else elseTemplate">
+  <table appBackgrounblock>
+    <thead>
+      <tr>
+        <th>Nombre Completo</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let alumno of listadoDeAlumnos">
+      <tr>
+        <td>{{ alumno | uppercase }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #elseTemplate>Listado de alumnos oculto</ng-template>
+<br />
+
+<button (click)="ocultarListado()">Ocultar Listado</button>
+<button (click)="mostrarListado()">Mostrar Listado</button>
+
+<h4>Agregar alumno</h4>
+<form (submit)="agregarAlumno(nombre)">
+  <input [(ngModel)]="nombre" name="nombre" />
+  <button type="submit">Agregar</button>
+</form>

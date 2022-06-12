@@ -6,13 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listado.component.scss'],
 })
 export class ListadoComponent implements OnInit {
-  listadoDeAlumnos: string[] = [
+  public listadoDeAlumnos: string[] = [
     'Adrian Gonzalez',
     'Juan Perez',
     'Pedro Perez',
     'Juan Dominguez',
     'Juan Gonzalez',
   ];
+  public estado: boolean = false;
+  public nombre?: string;
 
   constructor() {
     for( let i = 0; i < this.listadoDeAlumnos.length; i++ ) {
@@ -21,4 +23,18 @@ export class ListadoComponent implements OnInit {
 
   }
   ngOnInit(): void {}
+
+  public mostrarListado(): void {
+    this.estado = true;
+  }
+
+  public ocultarListado(): void {
+    this.estado = false;
+  }
+
+  public agregarAlumno(e:any): void {
+
+    this.listadoDeAlumnos.push(e);
+  }
+
 }
